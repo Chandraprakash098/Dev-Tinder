@@ -1,0 +1,43 @@
+So When I install express using npm i express then it is added in dependencies in package.json,
+so the question arizes what is package.json ? 
+
+** 
+   The package.json file is the core configuration 
+   file of a Node.js project that stores project metadata, dependencies, and scripts.It allows 
+   easy management of packages and lets others install and run your project with commands like 
+   npm install and npm run. 
+**
+
+**
+So now the thing is that when you install express js then you can see in dependencies that its shows like this 
+^5.1.0, we know this is express version but why it shows three times like 5 then 1 then 0 so I explain you this,
+so basically 
+
+
+5 --> Major version ( when very crticial changes made in express)
+1 --> Minor Version (when some minor changes made in express like add any functionality)
+0 --> Patch Version (It shows very-very small changes in express like any small bug fix)
+^ --> This sign is called as Caret,It tells npm which versions of the package are acceptable when installing or updating
+
+like in the ^5.1.0 --> npm can install any version greater than or equal to 5.1.0 but less than 6.0.0.
+(So it allows updates to minor and patch versions, but not major ones.)
+
+
+if you see any version which shows like this ~5.1.0 then it means -->npm can install versions greater than or equal to 5.1.0 but less than 5.2.0.
+(So it only allows patch updates, not minor or major updates.)
+**
+
+
+** Then one question arizes that when you install express then node modules also insatll so what is this,
+so node modules basically insatll the express code and all of its dependencies, like you can go to node modules
+and check there is an exprees folder and you can see there is a package.json file in it and when you go to it 
+then you see there are lot of dependencies are there and you can see that all dependencies are also installed in
+node_modules **
+
+
+**
+now what is package-lock.json --> It locks the exact versions of all installed packages (and their sub-dependencies).
+**
+
+
+
