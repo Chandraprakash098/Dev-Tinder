@@ -54,7 +54,7 @@ const authController = {
             return res.status(404).json({message:"user not found"})
         }
 
-        const isPassMatch= bcrypt.compare(password, user.password)
+        const isPassMatch= await bcrypt.compare(password, user.password)
         if(!isPassMatch){
           res.status("Login Failed, Password Mismatch")
         }
